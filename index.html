@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReplyMint - AI-Powered Review Assistant | Coming Soon</title>
-    <meta name="description" content="ReplyMint - Transform your business reputation with AI-powered review management. Analyze, respond, and boost customer satisfaction effortlessly.">
+    <title>ReplyMint - Turn Google Reviews into Growth Opportunities | Coming Soon</title>
+    <meta name="description" content="ReplyMint - Smarter Review Management. Happier Customers. Automatically fetch, analyze, and respond to Google Reviews with AI-powered insights.">
+    <link rel="icon" type="image/png" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/generated-image-3-mlcwNbmOacNEuStsCHPaTQqvgxzspx.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -68,6 +69,16 @@
             animation: float 25s ease-in-out infinite reverse;
         }
 
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(6, 22, 17, 0.1) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 30s ease-in-out infinite;
+        }
+
         @keyframes float {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
             33% { transform: translate(30px, -30px) rotate(120deg); }
@@ -104,19 +115,10 @@
         .logo-icon {
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, #b2d98b, #1d665d);
+            background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/generated-image-3-mlcwNbmOacNEuStsCHPaTQqvgxzspx.png') center/contain no-repeat;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
-            box-shadow: 
-                0 0 20px rgba(178, 217, 139, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-        }
-
-        .logo-icon::after {
-            font-size: 18px;
+            filter: drop-shadow(0 0 20px rgba(178, 217, 139, 0.3));
         }
 
         .logo-text {
@@ -202,38 +204,77 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
             margin-bottom: 32px;
-            color: #a1a1aa;
-            max-width: 600px;
+            color: #b2d98b;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .hero-description {
             font-size: 18px;
             margin-bottom: 60px;
-            color: #71717a;
-            max-width: 700px;
+            color: #a1a1aa;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.7;
         }
 
-        /* Features Section */
-        .features-section {
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 60px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #4a5568, #2d3748);
+            color: #a1a1aa;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: not-allowed;
+            margin-bottom: 12px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '🔒';
+            margin-right: 8px;
+        }
+
+        .cta-subtitle {
+            font-size: 14px;
+            color: #71717a;
+        }
+
+        /* Why ReplyMint Section */
+        .why-section {
             margin: 120px 0;
         }
 
-        .features-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .features-title {
-            font-size: 3rem;
+        .section-title {
+            font-size: 2.5rem;
             font-weight: 800;
+            text-align: center;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #ffffff, #b2d98b);
             -webkit-background-clip: text;
@@ -241,31 +282,32 @@
             background-clip: text;
         }
 
-        .features-subtitle {
+        .section-subtitle {
             font-size: 1.2rem;
             color: #a1a1aa;
+            text-align: center;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 60px;
         }
 
-        .features {
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
+            margin-bottom: 80px;
         }
 
-        .feature-card {
+        .benefit-card {
             background: rgba(255, 255, 255, 0.02);
             padding: 32px;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
             backdrop-filter: blur(10px);
         }
 
-        .feature-card::before {
+        .benefit-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -277,71 +319,165 @@
             transition: opacity 0.3s ease;
         }
 
-        .feature-card:hover::before {
+        .benefit-card:hover::before {
             opacity: 1;
         }
 
-        .feature-card:hover {
+        .benefit-card:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(178, 217, 139, 0.2);
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, rgba(178, 217, 139, 0.1), rgba(29, 102, 93, 0.1));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+        .benefit-icon {
             font-size: 24px;
-            border: 1px solid rgba(178, 217, 139, 0.2);
-            transition: all 0.3s ease;
+            margin-bottom: 16px;
+            display: block;
         }
 
-        .feature-card:hover .feature-icon {
-            background: linear-gradient(135deg, rgba(178, 217, 139, 0.2), rgba(29, 102, 93, 0.2));
-            box-shadow: 0 0 20px rgba(178, 217, 139, 0.2);
-        }
-
-        .feature-title {
-            font-size: 20px;
+        .benefit-title {
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 12px;
             color: #ffffff;
+            margin-bottom: 12px;
         }
 
-        .feature-description {
+        .benefit-description {
             color: #a1a1aa;
             line-height: 1.6;
             font-size: 15px;
+        }
+
+        /* Operation Modes Section */
+        .modes-section {
+            margin: 80px 0;
+        }
+
+        .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .mode-card {
+            background: linear-gradient(135deg, rgba(178, 217, 139, 0.05), rgba(29, 102, 93, 0.05));
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(178, 217, 139, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mode-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #b2d98b, #1d665d);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mode-card:hover::before {
+            opacity: 1;
+        }
+
+        .mode-card:hover {
+            background: linear-gradient(135deg, rgba(178, 217, 139, 0.1), rgba(29, 102, 93, 0.1));
+            border-color: rgba(178, 217, 139, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .mode-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #b2d98b, #1d665d);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 0 20px rgba(178, 217, 139, 0.3);
+        }
+
+        .mode-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
             margin-bottom: 16px;
         }
 
-        .feature-highlight {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: linear-gradient(135deg, rgba(178, 217, 139, 0.1), rgba(29, 102, 93, 0.1));
-            color: #b2d98b;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(178, 217, 139, 0.2);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .mode-description {
+            color: #a1a1aa;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
-        .feature-highlight::before {
-            content: '';
-            width: 4px;
-            height: 4px;
-            background: #b2d98b;
-            border-radius: 50%;
+        .mode-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mode-features li {
+            color: #b2d98b;
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .mode-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #b2d98b;
+            font-weight: bold;
+        }
+
+        /* Target Audience */
+        .audience-section {
+            margin: 80px 0;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .audience-card {
+            background: linear-gradient(135deg, rgba(178, 217, 139, 0.05), rgba(29, 102, 93, 0.05));
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(178, 217, 139, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .audience-card:hover {
+            background: linear-gradient(135deg, rgba(178, 217, 139, 0.1), rgba(29, 102, 93, 0.1));
+            border-color: rgba(178, 217, 139, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .audience-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .audience-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
         }
 
         /* Footer */
@@ -411,17 +547,12 @@
                 padding: 60px 0;
             }
 
-            .features {
+            .benefits-grid,
+            .audience-grid,
+            /* .steps-grid, */
+            .modes-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
-            }
-
-            .features-section {
-                margin: 80px 0;
-            }
-
-            .features-header {
-                margin-bottom: 60px;
             }
 
             .footer-content {
@@ -434,23 +565,35 @@
                 font-size: 12px;
             }
 
-            .features-title {
-                font-size: 2.5rem;
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+            }
+
+            .mode-card {
+                padding: 30px;
             }
         }
 
         @media (max-width: 480px) {
-            .feature-card {
+            .benefit-card,
+            .audience-card {
                 padding: 24px;
             }
             
-            .features-title {
-                font-size: 2rem;
+            .section-title {
+                font-size: 1.8rem;
             }
 
-            .features {
-                grid-template-columns: 1fr;
-                gap: 16px;
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .mode-card {
+                padding: 24px;
             }
         }
     </style>
@@ -459,12 +602,13 @@
     <!-- Gradient Orbs -->
     <div class="gradient-orb orb-1"></div>
     <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
 
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">💬</div>
+                    <div class="logo-icon"></div>
                     <div class="logo-text">ReplyMint</div>
                 </div>
                 <a href="mailto:hello@replymint.io" class="contact-btn">Contact Us</a>
@@ -475,83 +619,140 @@
     <main>
         <div class="container">
             <div class="main-content">
-                <div class="status-badge animate-fade-in">🚀 Coming Soon - Under Active Development</div>
+                <div class="status-badge animate-fade-in">Coming Soon - Beta Launch</div>
                 
                 <h1 class="hero-title animate-fade-in animate-delay-1">
-                    AI-Powered Review Assistant for Modern Businesses
+                    Turn Your Business Reviews into Growth Opportunities
                 </h1>
                 
                 <p class="hero-subtitle animate-fade-in animate-delay-2">
-                    Transform your business reputation with intelligent review management
+                    💬 Smarter Review Management. Happier Customers.
                 </p>
                 
                 <p class="hero-description animate-fade-in animate-delay-3">
-                    Effortlessly manage and respond to your business reviews with advanced AI. 
-                    Understand customers, address concerns, and win them back — all while saving time and strengthening your reputation.
+                    ReplyMint helps businesses automatically fetch, analyze, and respond to customer reviews across multiple platforms. Our Beta version focuses on Google Maps location reviews, with AI-powered sentiment analysis and multi-language support.
                 </p>
+
+                <div class="cta-section animate-fade-in">
+                    <h3 class="cta-title">🎯 Start Managing Reviews Smarter</h3>
+                    <div class="cta-button">
+                        Try out - Beta Coming Soon
+                    </div>
+                    <p class="cta-subtitle">No credit card required. Setup takes less than 2 minutes.</p>
+                </div>
             </div>
 
-            <div class="features-section">
-                <div class="features-header animate-fade-in">
-                    <h2 class="features-title">Powerful AI Features</h2>
-                    <p class="features-subtitle">
-                        Everything you need to transform your review management process
-                    </p>
+            <!-- Why ReplyMint Section -->
+            <div class="why-section">
+                <h2 class="section-title">🚀 Why ReplyMint?</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-fade-in">
+                        <span class="benefit-icon">⚡</span>
+                        <h3 class="benefit-title">Instant Google Integration</h3>
+                        <p class="benefit-description">
+                            Securely connect your Google Business account in seconds. No passwords or complex setup required.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card animate-fade-in animate-delay-1">
+                        <span class="benefit-icon">📊</span>
+                        <h3 class="benefit-title">Centralized Dashboard</h3>
+                        <p class="benefit-description">
+                            Manage reviews across all your locations from a single interface with full action logs and detailed statistics.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card animate-fade-in animate-delay-2">
+                        <span class="benefit-icon">🧠</span>
+                        <h3 class="benefit-title">Advanced Sentiment Analysis</h3>
+                        <p class="benefit-description">
+                            AI-powered sentiment detection to understand customer emotions and prioritize responses effectively.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card animate-fade-in animate-delay-3">
+                        <span class="benefit-icon">🌍</span>
+                        <h3 class="benefit-title">Multi-Language Support</h3>
+                        <p class="benefit-description">
+                            Reply to customers in their native language with AI-powered translation and localization.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card animate-fade-in">
+                        <span class="benefit-icon">🔔</span>
+                        <h3 class="benefit-title">Smart Alerts & Insights</h3>
+                        <p class="benefit-description">
+                            Get notified of negative reviews, sentiment spikes, and actionable trends in real-time.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card animate-fade-in animate-delay-1">
+                        <span class="benefit-icon">📈</span>
+                        <h3 class="benefit-title">Performance Analytics</h3>
+                        <p class="benefit-description">
+                            Track response times, sentiment trends, and customer satisfaction metrics with comprehensive analytics and reporting.
+                        </p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="features">
-                    <div class="feature-card animate-fade-in">
-                        <div class="feature-icon">🧠</div>
-                        <h3 class="feature-title">Smart AI Insights</h3>
-                        <p class="feature-description">
-                            Advanced sentiment analysis and customer emotion detection to understand what your customers really think and feel about your business.
+            <!-- Operation Modes Section -->
+            <div class="modes-section">
+                <h2 class="section-title">⚙️ Choose Your Operation Mode</h2>
+                <p class="section-subtitle">
+                    Select the level of automation that works best for your business
+                </p>
+                
+                <div class="modes-grid">
+                    <div class="mode-card animate-fade-in">
+                        <div class="mode-icon">🤖</div>
+                        <h3 class="mode-title">Automated Mode</h3>
+                        <p class="mode-description">
+                            Get AI-powered reply suggestions that you can review and customize before sending. Perfect for businesses that want control over every response.
                         </p>
-                        <div class="feature-highlight">AI-Powered</div>
+                        <ul class="mode-features">
+                            <li>AI-generated response suggestions</li>
+                            <li>Review and edit before sending</li>
+                            <li>Brand voice customization</li>
+                            <li>Approval workflow</li>
+                        </ul>
                     </div>
                     
-                    <div class="feature-card animate-fade-in animate-delay-1">
-                        <div class="feature-icon">⚡</div>
-                        <h3 class="feature-title">Automated Responses</h3>
-                        <p class="feature-description">
-                            Generate personalized, professional responses that match your brand voice. Our AI learns your tone and creates authentic replies in seconds.
+                    <div class="mode-card animate-fade-in animate-delay-1">
+                        <div class="mode-icon">🚀</div>
+                        <h3 class="mode-title">Full Autopilot</h3>
+                        <p class="mode-description">
+                            Let our AI handle responses automatically based on your preferences and guidelines. Ideal for busy businesses with high review volumes.
                         </p>
-                        <div class="feature-highlight">Lightning Fast</div>
+                        <ul class="mode-features">
+                            <li>Fully automated responses</li>
+                            <li>Custom response guidelines</li>
+                            <li>Sentiment-based reply selection</li>
+                            <li>Complete hands-off operation</li>
+                        </ul>
                     </div>
-                    
-                    <div class="feature-card animate-fade-in animate-delay-2">
-                        <div class="feature-icon">📈</div>
-                        <h3 class="feature-title">Reputation Boost</h3>
-                        <p class="feature-description">
-                            Strategic engagement that turns negative reviews into opportunities. Increase positive ratings and build stronger customer relationships.
-                        </p>
-                        <div class="feature-highlight">Proven Results</div>
-                    </div>
-                    
-                    <div class="feature-card animate-fade-in animate-delay-3">
-                        <div class="feature-icon">🗺️</div>
-                        <h3 class="feature-title">Google Maps Integration</h3>
-                        <p class="feature-description">
-                            Starting with Google Maps reviews, we'll help you manage your most important customer feedback. Additional platforms coming soon.
-                        </p>
-                        <div class="feature-highlight">Launch Ready</div>
-                    </div>
+                </div>
+            </div>
 
-                    <div class="feature-card animate-fade-in">
-                        <div class="feature-icon">🔒</div>
-                        <h3 class="feature-title">Enterprise Security</h3>
-                        <p class="feature-description">
-                            Bank-level encryption and compliance with GDPR, CCPA, and SOC 2 standards. Your data and customer information stay protected.
-                        </p>
-                        <div class="feature-highlight">Secure</div>
+            <!-- Target Audience Section -->
+            <div class="audience-section">
+                <h2 class="section-title">🧠 Who It's For</h2>
+                
+                <div class="audience-grid">
+                    <div class="audience-card animate-fade-in">
+                        <span class="audience-icon">🏢</span>
+                        <h3 class="audience-title">Multi-location Businesses</h3>
                     </div>
                     
-                    <div class="feature-card animate-fade-in animate-delay-1">
-                        <div class="feature-icon">📊</div>
-                        <h3 class="feature-title">Analytics Dashboard</h3>
-                        <p class="feature-description">
-                            Comprehensive reporting and insights to track your reputation progress, response times, and customer satisfaction trends.
-                        </p>
-                        <div class="feature-highlight">Data-Driven</div>
+                    <div class="audience-card animate-fade-in animate-delay-1">
+                        <span class="audience-icon">🎯</span>
+                        <h3 class="audience-title">Small and Big Businesses</h3>
+                    </div>
+                    
+                    <div class="audience-card animate-fade-in animate-delay-2">
+                        <span class="audience-icon">⏰</span>
+                        <h3 class="audience-title">Busy Business Owners Who Care About Reputation</h3>
                     </div>
                 </div>
             </div>
@@ -589,8 +790,8 @@
                 });
             }, observerOptions);
 
-            // Observe all feature cards
-            document.querySelectorAll('.feature-card').forEach(el => {
+            // Observe all animated elements
+            document.querySelectorAll('.benefit-card, .audience-card, .mode-card').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 el.style.transition = 'all 0.6s ease-out';
@@ -598,7 +799,7 @@
             });
 
             // Enhanced hover effects
-            document.querySelectorAll('.feature-card').forEach(card => {
+            document.querySelectorAll('.benefit-card, .audience-card, .mode-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-8px)';
                 });
@@ -608,31 +809,26 @@
                 });
             });
 
-            // Smooth scroll for any internal links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
             // Add subtle mouse movement parallax
             document.addEventListener('mousemove', function(e) {
                 const mouseX = e.clientX / window.innerWidth;
                 const mouseY = e.clientY / window.innerHeight;
                 
                 document.querySelectorAll('.gradient-orb').forEach((orb, index) => {
-                    const speed = (index + 1) * 0.5;
+                    const speed = (index + 1) * 0.3;
                     const x = (mouseX - 0.5) * speed;
                     const y = (mouseY - 0.5) * speed;
                     orb.style.transform = `translate(${x}px, ${y}px)`;
                 });
+            });
+
+            // Disabled button interaction
+            document.querySelector('.cta-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
             });
         });
     </script>
