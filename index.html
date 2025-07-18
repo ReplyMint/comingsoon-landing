@@ -34,16 +34,31 @@
       letter-spacing: -1px;
     }
     h2 {
-      margin: 0.3em 0 0.4em 0;
-      font-size: 1.6em;
+      margin: 0.3em 0 0.5em 0;
+      font-size: 1.35em;
       color: #222;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
     }
-    p {
+    .tagline {
       color: #4b4b4b;
-      font-size: 1.05em;
-      margin-bottom: 1.2em;
+      font-size: 1.12em;
+      margin-bottom: 1.1em;
       line-height: 1.5;
+      font-weight: 500;
+    }
+    .coming-soon {
+      display: inline-block;
+      background: #e7faf0;
+      color: #16D364;
+      padding: 7px 20px;
+      border-radius: 14px;
+      font-size: 1em;
+      font-weight: 700;
+      letter-spacing: .06em;
+      margin-bottom: 1em;
+      margin-top: 0.6em;
     }
     ul.features {
       list-style: none;
@@ -56,7 +71,7 @@
       padding-left: 24px;
       margin-bottom: 0.8em;
       color: #444;
-      font-size: 0.95em;
+      font-size: 0.98em;
     }
     ul.features li::before {
       content: "✓";
@@ -71,10 +86,9 @@
       color: #888;
       font-size: 0.93em;
     }
-
     @media (max-width: 480px) {
       .container {
-        padding: 32px 16px;
+        padding: 32px 10px;
       }
       .brand {
         font-size: 2em;
@@ -85,21 +99,22 @@
 <body>
   <div class="container">
     <div class="brand">ReplyMint</div>
-    <h2>AI-Powered Review Assistant</h2>
-    <p>
+    <div class="coming-soon">
+      Project Under Development – Coming Soon!
+    </div>
+    <h2>AI-powered Review Assistant for Businesses</h2>
+    <div class="tagline">
       Effortlessly manage and respond to your business reviews.<br>
-      Understand your customers, address concerns, and win them back — all powered by AI.
-    </p>
-
+      Understand customers, address concerns, and win them back — all powered by advanced AI!
+    </div>
     <ul class="features">
       <li>Analyze customer reviews with smart AI insights</li>
-      <li>Fully automate review responses with natural language</li>
-      <li>Improve your ratings and customer satisfaction</li>
-      <li>Save time and stay on top of your reputation</li>
+      <li>Fully automate review responses in natural language</li>
+      <li>Boost ratings and customer satisfaction</li>
+      <li>Save time and keep your reputation strong</li>
     </ul>
-
     <div class="social">
-      Questions? Email us: <a href="mailto:hello@replymint.io">hello@replymint.io</a>
+      Questions? Email: <a href="mailto:hello@replymint.io">hello@replymint.io</a>
     </div>
   </div>
 </body>
